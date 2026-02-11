@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f0f12;
+  --surface: #18181c;
+  --border: #2a2a30;
+  --text: #e4e4e7;
+  --muted: #71717a;
+  --accent: #a78bfa;
+  --accent-dim: #7c3aed;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Drag-and-drop upload zone */
+.upload-zone {
+  @apply border-2 border-dashed border-[var(--border)] rounded-xl p-6 text-center transition-colors;
+}
+.upload-zone.drag-over {
+  border-color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+}
